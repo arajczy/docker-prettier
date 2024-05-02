@@ -1,0 +1,4 @@
+# .prettierrc
+arrowParens: "avoid"
+printWidth: 95
+trailingComma: "none"
