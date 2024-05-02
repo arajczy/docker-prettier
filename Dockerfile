@@ -1,9 +1,14 @@
-FROM node:alpine3.12
+FROM node:lts-alpine
 
-RUN npm add -g prettier
+LABEL org.opencontainers.image.authors="arajczy" \
+      org.opencontainers.image.description="Dockerized prettier application" \
+      usage="docker run --rm -v $(pwd):/data arajczy/prettier $@" \
+      org.opencontainers.image.version="1.0.0"
+
+RUN corepack enable npm && corepack prepare npm@latest --activate && npm add -g prettier
 
 VOLUME /data
 WORKDIR /data
 
-ENTRYPOINT ["prettier", "--print-width=111", "--arrow-parens=avoid", "--trailing-comma=none"]
+ENTRYPOINT ["prettier", "--arrow-parens=avoid", "--print-width=111", "--trailing-comma=none"]
 CMD ["--help"]
