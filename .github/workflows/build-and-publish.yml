@@ -31,9 +31,9 @@ jobs:
             ${{ env.IMAGE_NAME }}
             ghcr.io/${{ env.IMAGE_NAME }}
           labels: |
-            org.opencontainers.image.authors="Adam Rajczy"
-            org.opencontainers.image.description="Dockerized prettier application"
-            org.opencontainers.image.usage="docker run --rm -v $(pwd):/data arajczy/prettier $@"
+            org.opencontainers.image.authors=Adam Rajczy
+            org.opencontainers.image.description=Dockerized prettier application
+            org.opencontainers.image.usage=docker run --rm -v $(pwd):/data arajczy/prettier $@
           tags: latest
 
       - name: Set up QEMU
