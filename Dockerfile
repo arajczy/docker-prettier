@@ -1,6 +1,6 @@
 FROM node:lts-alpine
 
-LABEL org.opencontainers.image.authors="arajczy" \
+LABEL org.opencontainers.image.authors="Adam Rajczy" \
       org.opencontainers.image.description="Dockerized prettier application" \
       usage="docker run --rm -v $(pwd):/data arajczy/prettier $@" \
       org.opencontainers.image.version="1.0.0"
