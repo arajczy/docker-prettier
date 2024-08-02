@@ -42,4 +42,3 @@
     ```shell
     prettier --version
     ```
-```
