@@ -1,23 +1,45 @@
-# Dockerized prettier application for use in LibreELEC
+# Dockerized prettier application for use @ LibreELEC
 
 ## Usage
 
-`pull arajczy/prettier`
+1.  Pull the image from registry
 
-`docker run -i --rm -v $(pwd):/data arajczy/prettier`
+    ```shell
+    pull arajczy/prettier
+    ```
 
-## Install dockerized prettier as application
+2.  run the container
 
-```shell
-pull arajczy/prettier
+    ```shell
+    docker run -i --rm -v $(pwd):/data arajczy/prettier
+    ```
 
-mkdir -p /storage/bin
-echo '#!/bin/sh' > /storage/bin/prettier
-echo 'docker docker run -i --rm -v `pwd`:/data arajczy/prettier "$@"' >> /storage/bin/prettier
-echo 'export PATH=/storage/bin:$PATH' >> /storage/.profile
+## Install dockerized prettier application @ LibreELEC
 
-source /storage/.profile
+1.  Pull the image
 
-prettier --version
+    ```shell
+    pull arajczy/prettier
+    ```
+
+2.  Add application script
+
+    ```shell
+    mkdir -p /storage/bin
+    echo '#!/bin/sh' > /storage/bin/prettier
+    echo 'docker docker run -i --rm -v `pwd`:/data arajczy/prettier "$@"' >> /storage/bin/prettier
+    echo 'export PATH=/storage/bin:$PATH' >> /storage/.profile
+    ```
+
+3.  Source `.profile`
+
+    ```shell
+    source /storage/.profile
+    ```
+
+4.  Run the application
+
+    ```shell
+    prettier --version
+    ```
 ```
-
