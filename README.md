@@ -1,4 +1,4 @@
-# [Dockerized prettier application for use @ LibreELEC](https://github.com/arajczy/docker/prettier)
+# [Dockerized prettier application for use @ LibreELEC](https://github.com/arajczy/docker-prettier)
 
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/arajczy/prettier/latest?logo=docker)
 ![Docker Pulls](https://img.shields.io/docker/pulls/arajczy/prettier?logo=docker)
