@@ -1,6 +1,6 @@
 FROM node:lts-alpine
 
-RUN corepack enable npm && corepack prepare npm@latest --activate && npm add -g prettier
+RUN npm add -g npm prettier
 
 VOLUME /data
 WORKDIR /data
